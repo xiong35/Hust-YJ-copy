@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "市场",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "card": "../../components/card/card",
+    "empty": "../../components/empty/empty",
+    "tabbar": "../../components/custom-tab-bar/index"
+  }
+}

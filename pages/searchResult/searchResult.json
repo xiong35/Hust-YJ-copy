@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "empty": "../../components/empty/empty",
+    "card": "../../components/card/card"
+  },
+  "navigationBarTitleText": "搜索结果"
+}

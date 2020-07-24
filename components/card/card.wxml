@@ -1,0 +1,63 @@
+<navigator url="{{utils.getUrl(item, isWant)}}" open-type="navigate" wx:for="{{items}}" wx:key="_id" class="card">
+  <image wx:if="{{item.pictures.length>0}}" src="{{item.pictures[0]+'-thumbnail'}}" mode="aspectFill" class="{{isWant?'double':'single'}}" lazy-load="true" />
+  <view class="card-info">
+    <text class="price">￥{{item.sell_price||item.except_price||'暂无'}}</text>
+    <text class="description">{{utils.fmt(item, isWant)}}</text>
+    <view class="detail" wx:if="{{isWant}}">
+      <text>{{utils.fmt(item, false)}}</text>
+    </view>
+    <view class="info">
+      <text class="where">{{utils.getAddr(item.address)}}</text>
+      <text class="when">{{utils.getDescription(now, item.update_at)+"前发布"}}</text>
+    </view>
+  </view>
+</navigator>
+<wxs module="utils">
+function getDescription (now, timestamp) {
+  var diff = now*1/1000 - timestamp
+  var diffHour = diff / 60 / 60
+  var diffDay = diffHour / 24
+  var diffMonth = diffDay / 30
+  if (diffHour<1) {
+    return "不足1小时"
+  }
+  if (diffDay<1) {
+    return ~~diffHour+"小时"
+  }
+  if (diffMonth<1) {
+    return ~~diffDay+"天"
+  }
+  return ~~diffMonth+"月"
+}
+
+function getAddr(addr){
+  return addr.split("|").join("")
+}
+
+function fmt(item, isWant){
+  if(isWant){
+    return item.title
+  }
+  var text = item.title + item.description
+  if (text.length>13) {
+    return text.slice(0,13)+'...'
+  }
+  return text
+}
+
+function getUrl(item, isWant) {
+  var _id = item._id
+  var path;
+  if (!isWant) {
+    path = "/pages/goodPage/goodPage?id="
+  } else {
+    path = "/pages/goodPage/goodPage?want=true&id="
+  }
+  return path+_id
+}
+
+module.exports.getDescription = getDescription;
+module.exports.getAddr = getAddr;
+module.exports.fmt = fmt;
+module.exports.getUrl = getUrl;
+</wxs>

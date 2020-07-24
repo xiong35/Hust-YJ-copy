@@ -1,0 +1,141 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": false,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.0",
+	"appid": "wx0a511cb679f2937f",
+	"projectname": "hustYJ",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search res",
+					"pathName": "pages/searchResult/searchResult",
+					"query": "kw=电动车",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "good page",
+					"pathName": "pages/goodPage/goodPage",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/about/about",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "collect",
+					"pathName": "pages/myCollect/myCollect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "post sale",
+					"pathName": "pages/postSale/postSale",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/postWant/postWant",
+					"pathName": "pages/postWant/postWant",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "postAuth",
+					"pathName": "pages/postAuth/postAuth",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "editInfo",
+					"pathName": "pages/editInfo/editInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "mySale",
+					"pathName": "pages/mySale/mySale",
+					"query": "type=reward",
+					"scene": null
+				}
+			]
+		}
+	}
+}

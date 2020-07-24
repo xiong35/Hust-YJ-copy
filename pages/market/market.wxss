@@ -1,0 +1,191 @@
+.header {
+  width: 750rpx;
+  height: 88rpx;
+  padding: 0 16rpx;
+  color: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.header .search-bar {
+  height: 60rpx;
+  width: 588rpx;
+  background-color: #f2f2f2;
+  border-radius: 30rpx;
+}
+
+.header .search-bar image {
+  margin: 0 4px;
+}
+
+.header image {
+  height: 40rpx;
+  margin: 0 44rpx;
+  width: 42rpx;
+  position: relative;
+  bottom: -3px;
+}
+
+.tabs {
+  position: fixed;
+  width: 750rpx;
+  height: 88rpx;
+  left: 0;
+  background-color: #fff;
+  top: 88rpx;
+  z-index: 2;
+}
+
+.tabs .tabs-items-container {
+  justify-content: space-around;
+}
+
+.tabs .tabs-items-container .tab-item {
+  flex: 1;
+  padding: 8px;
+  position: relative;
+  bottom: 2px;
+  transition: all 0.3s linear;
+}
+
+.tabs .slider {
+  width: 58rpx;
+  height: 0px;
+  background-color: var(--theme);
+  border: 1.3px solid var(--theme);
+  position: relative;
+  top: -10rpx;
+  transition: all 0.3s;
+}
+
+.tabs .slider.ind0 {
+  left: 92rpx;
+}
+
+.tabs .slider.ind1 {
+  left: 343rpx;
+}
+
+.tabs .slider.ind2 {
+  left: 594rpx;
+}
+
+.tabs .active {
+  color: var(--theme);
+}
+
+.card-container {
+  position: relative;
+  top: 176rpx;
+  width: 750rpx;
+  z-index: 0;
+}
+
+.card-container .left-container,
+.card-container .right-container {
+  float: left;
+  width: 346rpx;
+}
+
+.card-container .left-container {
+  margin-right: 10rpx;
+  margin-left: 20rpx;
+}
+
+.card-container .right-container {
+  margin-left: 10rpx;
+  margin-right: 19rpx;
+}
+
+.card-container .double-container {
+  padding: 0 20rpx;
+}
+
+.filter-page {
+  position: fixed;
+  width: 0;
+  height: 0;
+  z-index: 20;
+  left: 0;
+  top: 0;
+}
+
+.filter-page .filter-hider {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.filter-page .tabs-container {
+  position: relative;
+  transition: all 0.3s;
+  left: 750rpx;
+  height: 100vh;
+  width: 600rpx;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter-page .tabs-container .submit {
+  width: 416rpx;
+  height: 96rpx;
+  background-image: linear-gradient(45deg, var(--pink), var(--orange));
+  margin-bottom: 54rpx;
+  border-radius: 4px;
+  color: #fff;
+  font-size: px;
+}
+
+.filter-page .tabs-container .choice-container {
+  width: 100%;
+  display: block;
+}
+
+.filter-page .tabs-container .choice-container .cat-title {
+  color: var(--theme);
+  margin: 30rpx;
+  display: block;
+}
+
+.filter-page .tabs-container .choice-container .choice-tab {
+  display: inline-block;
+  width: 160rpx;
+  line-height: 68rpx;
+  background-color: #f4f4f4;
+  margin: 0rpx 0 20rpx 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.filter-page .tabs-container .choice-container .choice-tab.active {
+  background-image: linear-gradient(45deg, var(--pink), var(--orange));
+  color: white;
+}
+
+.filter-page.is-open {
+  display: block;
+}
+
+.filter-page.is-open .filter-hider {
+  opacity: 0.8;
+  display: block;
+}
+
+.filter-page.is-open .tabs-container {
+  left: 150rpx;
+}
+
+tabbar {
+  z-index: 30;
+}

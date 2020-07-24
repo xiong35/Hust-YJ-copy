@@ -1,0 +1,172 @@
+$heightS: 88rpx;
+$heightT: 88rpx;
+
+$colored: linear-gradient(45deg, var(--pink), var(--orange));
+
+.header {
+  width: 750rpx;
+  height: $heightS;
+  padding: 0 16rpx;
+  color: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  .search-bar {
+    height: 60rpx;
+    width: 588rpx;
+    background-color: #f2f2f2;
+    border-radius: 30rpx;
+    image {
+      margin: 0 4px;
+    }
+  }
+  image {
+    height: 40rpx;
+    margin: 0 44rpx;
+    width: 42rpx;
+    position: relative;
+    bottom: -3px;
+  }
+}
+
+.tabs {
+  position: fixed;
+  width: 750rpx;
+  height: $heightT;
+  left: 0;
+  background-color: #fff;
+  top: $heightS;
+  z-index: 2;
+  .tabs-items-container {
+    justify-content: space-around;
+    .tab-item {
+      flex: 1;
+      padding: 8px;
+      position: relative;
+      bottom: 2px;
+      transition: all 0.3s linear;
+    }
+  }
+  .slider {
+    width: 29 * 2rpx;
+    height: 0px;
+    background-color: var(--theme);
+    border: 1.3px solid var(--theme);
+    position: relative;
+    top: -10rpx;
+    transition: all 0.3s;
+  }
+  .slider.ind0 {
+    left: 92rpx;
+  }
+  .slider.ind1 {
+    left: ((594rpx+92rpx)/2);
+  }
+  .slider.ind2 {
+    left: 594rpx;
+  }
+  .active {
+    color: var(--theme);
+  }
+}
+
+.card-container {
+  $top: $heightS + $heightT;
+  position: relative;
+  top: $top;
+  width: 750rpx;
+  z-index: 0;
+  .left-container,
+  .right-container {
+    float: left;
+    width: 173rpx * 2;
+  }
+  .left-container {
+    margin-right: 10rpx;
+    margin-left: 20rpx;
+  }
+  .right-container {
+    margin-left: 10rpx;
+    margin-right: 19rpx;
+  }
+  .double-container {
+    padding: 0 20rpx;
+  }
+}
+
+.filter-page {
+  position: fixed;
+  width: 0;
+  height: 0;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  .filter-hider {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+  }
+  .tabs-container {
+    position: relative;
+    transition: all 0.3s;
+    left: 750rpx;
+    height: 100vh;
+    width: 600rpx;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    .submit {
+      width: 208rpx * 2;
+      height: 48rpx * 2;
+      background-image: $colored;
+      margin-bottom: 27rpx * 2;
+      border-radius: 4px;
+      color: #fff;
+      font-size: px;
+    }
+    .choice-container {
+      width: 100%;
+      display: block;
+      .cat-title {
+        color: var(--theme);
+        margin: 30rpx;
+        display: block;
+      }
+      .choice-tab {
+        display: inline-block;
+        width: 160rpx;
+        line-height: 68rpx;
+        background-color: #f4f4f4;
+        margin: 0rpx 0 20rpx 30rpx;
+        text-align: center;
+        font-size: 28rpx;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &.active {
+          background-image: $colored;
+          color: white;
+        }
+      }
+    }
+  }
+  &.is-open {
+    display: block;
+    .filter-hider {
+      opacity: 0.8;
+      display: block;
+    }
+    .tabs-container {
+      left: 150rpx;
+    }
+  }
+}
+tabbar {
+  z-index: 30;
+}

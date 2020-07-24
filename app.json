@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/market/market",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/searchResult/searchResult",
+    "pages/mySale/mySale",
+    "pages/myCollect/myCollect",
+    "pages/postSale/postSale",
+    "pages/postAuth/postAuth",
+    "pages/editInfo/editInfo",
+    "pages/goodPage/goodPage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
